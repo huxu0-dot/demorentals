@@ -1,25 +1,21 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XYZChange Rentals | Premium UK Rental Properties</title>
+    <title>Top Estates Ltd
+ | Premium UK Properties</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #0a1a2a;  /* Dark blue */
-            --secondary: #0056b3;  /* Bright blue */
-            --accent: #000000;  /* Black */
-            --light: #ffffff;  /* White */
-            --dark: #121212;  /* Near black */
-            --gray: #6c757d;
-            --light-gray: #f5f7fa;
-            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-            --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            --box-shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
+            --primary: #2a5d67;
+            --secondary: #3a8a7a;
+            --accent: #f4a261;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --text: #333333;
+            --text-light: #6c757d;
         }
 
         * {
@@ -29,143 +25,44 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            color: var(--dark);
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text);
             line-height: 1.6;
             overflow-x: hidden;
-            background-color: var(--light);
+            background-color: #f5f5f5;
         }
 
         h1, h2, h3, h4, h5, h6 {
-            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-family: 'Playfair Display', serif;
             font-weight: 600;
-            line-height: 1.3;
-            color: var(--accent);
         }
 
         a {
             text-decoration: none;
             color: inherit;
-            transition: var(--transition);
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
         }
 
         .container {
             width: 90%;
-            max-width: 1320px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 12px 28px;
-            background-color: var(--secondary);
-            color: white;
-            border: none;
-            border-radius: 4px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-            font-size: 14px;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-
-        .btn:after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: var(--primary);
-            transform: translateX(-100%);
-            transition: var(--transition);
-            z-index: -1;
-        }
-
-        .btn:hover {
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: var(--box-shadow-hover);
-        }
-
-        .btn:hover:after {
-            transform: translateX(0);
-        }
-
-        .btn-outline {
-            background-color: transparent;
-            border: 2px solid var(--secondary);
-            color: var(--secondary);
-        }
-
-        .btn-outline:hover {
-            background-color: var(--secondary);
-            color: white;
-        }
-
-        .section {
-            padding: 90px 0;
-        }
-
-        .section-title {
-            font-size: 2.4rem;
-            margin-bottom: 1.5rem;
-            position: relative;
-            display: inline-block;
-            color: var(--accent);
-        }
-
-        .section-title:after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background-color: var(--secondary);
-        }
-
-        .section-subtitle {
-            color: var(--gray);
-            margin-bottom: 2.5rem;
-            font-size: 1.1rem;
-            max-width: 700px;
-        }
-
-        .text-center {
-            text-align: center;
-        }
-
-        .text-center .section-title:after {
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        /* Header */
+        /* Header Styles */
         header {
+            background: linear-gradient(135deg, rgba(42, 93, 103, 0.9) 0%, rgba(58, 138, 122, 0.9) 100%);
+            color: white;
+            padding: 1rem 0;
             position: fixed;
-            top: 0;
-            left: 0;
             width: 100%;
             z-index: 1000;
-            padding: 20px 0;
-            transition: var(--transition);
-            background-color: var(--light);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            padding: 0.5rem 0;
+            background: rgba(42, 93, 103, 0.98);
         }
 
         .header-container {
@@ -177,218 +74,226 @@
         .logo {
             font-size: 1.8rem;
             font-weight: 700;
-            color: var(--accent);
+            font-family: 'Playfair Display', serif;
             display: flex;
             align-items: center;
-            gap: 10px;
         }
 
-        .logo-icon {
-            color: var(--secondary);
-            font-size: 1.6rem;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
-        }
-
-        .nav-links a {
-            font-weight: 500;
-            position: relative;
-            font-size: 15px;
+        .logo i {
+            margin-right: 0.5rem;
             color: var(--accent);
         }
 
-        .nav-links a:after {
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+
+        nav ul li a {
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent);
+        }
+
+        nav ul li a::after {
             content: '';
             position: absolute;
-            bottom: -5px;
-            left: 0;
             width: 0;
             height: 2px;
-            background-color: var(--secondary);
-            transition: var(--transition);
+            background: var(--accent);
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s;
         }
 
-        .nav-links a:hover:after {
-            width: 100%;
-        }
-
-        .nav-links a.active {
-            color: var(--secondary);
-        }
-
-        .nav-links a.active:after {
+        nav ul li a:hover::after {
             width: 100%;
         }
 
         .mobile-menu-btn {
             display: none;
-            font-size: 1.6rem;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
             cursor: pointer;
-            color: var(--accent);
-            transition: var(--transition);
-        }
-
-        .mobile-menu-btn:hover {
-            color: var(--secondary);
         }
 
         /* Hero Section */
         .hero {
             height: 100vh;
-            min-height: 800px;
-            background: linear-gradient(rgba(10, 26, 42, 0.9), rgba(10, 26, 42, 0.9)), url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            min-height: 600px;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
             color: white;
             display: flex;
             align-items: center;
             position: relative;
             overflow: hidden;
-            margin-top: -80px;
-            padding-top: 80px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(42, 93, 103, 0.7) 0%, rgba(58, 138, 122, 0.7) 100%);
+            z-index: 0;
         }
 
         .hero-content {
-            max-width: 700px;
+            position: relative;
+            z-index: 1;
+            max-width: 600px;
             animation: fadeInUp 1s ease;
         }
 
         .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 25px;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
             line-height: 1.2;
-            color: white;
         }
 
         .hero p {
-            font-size: 1.15rem;
-            margin-bottom: 40px;
-            opacity: 0.9;
-            color: rgba(255, 255, 255, 0.9);
-            max-width: 600px;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
         }
 
-        .hero-btns {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .hero-btns .btn {
-            animation: fadeInUp 1s ease 0.2s forwards;
-            opacity: 0;
-        }
-
-        .hero-btns .btn-outline {
-            animation: fadeInUp 1s ease 0.4s forwards;
-            opacity: 0;
-            border-color: white;
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.8rem;
+            background: var(--accent);
             color: white;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
         }
 
-        .hero-btns .btn-outline:hover {
-            background-color: white;
+        .btn:hover {
+            background: #e76f51;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+            margin-left: 1rem;
+        }
+
+        .btn-outline:hover {
+            background: white;
             color: var(--primary);
         }
 
-        .search-box {
-            background-color: var(--light);
-            padding: 35px;
-            border-radius: 8px;
-            margin-top: 50px;
-            box-shadow: var(--box-shadow-hover);
-            animation: fadeInUp 1s ease 0.6s forwards;
+        /* Search Form */
+        .search-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+            animation: fadeIn 1s ease 0.5s forwards;
             opacity: 0;
         }
 
-        .search-box h3 {
-            color: var(--accent);
-            margin-bottom: 20px;
-            font-size: 1.4rem;
+        .search-form h3 {
+            margin-bottom: 1.5rem;
+            color: var(--primary);
         }
 
-        .search-form {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
+        .form-group {
+            margin-bottom: 1rem;
         }
 
-        .search-form input, .search-form select {
-            padding: 12px 18px;
-            border: 1px solid var(--light-gray);
-            border-radius: 4px;
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
             font-family: inherit;
-            transition: var(--transition);
-            background-color: var(--light);
-            font-size: 14px;
         }
 
-        .search-form input:focus, .search-form select:focus {
-            border-color: var(--secondary);
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.1);
+        .form-row {
+            display: flex;
+            gap: 1rem;
         }
 
-        .search-form button {
-            grid-column: 1 / -1;
-            margin-top: 10px;
+        .form-row .form-group {
+            flex: 1;
         }
 
         /* Featured Properties */
-        .featured-properties {
-            background-color: var(--light);
+        .section {
+            padding: 5rem 0;
         }
 
-        .properties-filter {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            margin-bottom: 35px;
-            flex-wrap: wrap;
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
         }
 
-        .filter-btn {
-            padding: 8px 20px;
-            background-color: var(--light);
-            border: 1px solid var(--light-gray);
-            border-radius: 30px;
-            cursor: pointer;
-            transition: var(--transition);
-            font-weight: 500;
-            font-size: 14px;
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
         }
 
-        .filter-btn:hover, .filter-btn.active {
-            background-color: var(--secondary);
-            color: white;
-            border-color: var(--secondary);
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background: var(--accent);
+            bottom: -10px;
+            left: 25%;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 1rem auto 0;
         }
 
         .properties-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
         }
 
         .property-card {
-            background-color: var(--light);
-            border-radius: 8px;
+            background: white;
+            border-radius: 10px;
             overflow: hidden;
-            box-shadow: var(--box-shadow);
-            transition: var(--transition);
-            position: relative;
-            border: 1px solid var(--light-gray);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
         }
 
         .property-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--box-shadow-hover);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
         }
 
         .property-img {
-            height: 240px;
+            height: 200px;
             overflow: hidden;
             position: relative;
         }
@@ -397,259 +302,203 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: var(--transition);
+            transition: transform 0.5s;
         }
 
         .property-card:hover .property-img img {
-            transform: scale(1.05);
+            transform: scale(1.1);
         }
 
-        .property-tag {
+        .property-badge {
             position: absolute;
-            top: 15px;
-            right: 15px;
-            background-color: var(--secondary);
+            top: 10px;
+            right: 10px;
+            background: var(--accent);
             color: white;
-            padding: 5px 15px;
+            padding: 0.3rem 0.8rem;
             border-radius: 30px;
+            font-size: 0.8rem;
             font-weight: 600;
-            font-size: 12px;
-            z-index: 2;
         }
 
-        .property-info {
-            padding: 20px;
+        .property-details {
+            padding: 1.5rem;
         }
 
         .property-price {
             font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--accent);
-            margin-bottom: 8px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
         }
 
         .property-price span {
-            font-size: 0.9rem;
-            color: var(--gray);
+            font-size: 1rem;
             font-weight: 400;
+            color: var(--text-light);
         }
 
-        .property-title {
-            font-size: 1.3rem;
-            margin-bottom: 8px;
-        }
-
-        .property-location {
-            color: var(--gray);
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 14px;
+        .property-address {
+            color: var(--text-light);
+            margin-bottom: 1rem;
         }
 
         .property-features {
             display: flex;
             justify-content: space-between;
-            border-top: 1px solid var(--light-gray);
-            padding-top: 12px;
-            margin-top: 12px;
+            margin-bottom: 1.5rem;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            padding: 1rem 0;
         }
 
-        .property-feature {
+        .feature {
+            text-align: center;
+        }
+
+        .feature i {
+            color: var(--accent);
+            margin-bottom: 0.3rem;
+        }
+
+        .feature span {
+            display: block;
+            font-size: 0.9rem;
+        }
+
+        /* About Section */
+        .about {
+            background: linear-gradient(135deg, rgba(42, 93, 103, 0.05) 0%, rgba(58, 138, 122, 0.05) 100%);
+        }
+
+        .about-content {
             display: flex;
             align-items: center;
-            gap: 6px;
-            font-size: 13px;
-            color: var(--gray);
+            gap: 3rem;
         }
 
-        /* Popular Locations */
-        .popular-locations {
-            background-color: var(--light-gray);
-        }
-
-        .locations-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-            gap: 20px;
-            margin-top: 40px;
-        }
-
-        .location-card {
-            border-radius: 8px;
+        .about-img {
+            flex: 1;
+            border-radius: 10px;
             overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h2 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .about-features {
+            margin-top: 2rem;
+        }
+
+        .about-feature {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-feature i {
+            color: var(--accent);
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            margin-top: 0.3rem;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: var(--primary);
+            color: white;
             position: relative;
-            height: 280px;
-            box-shadow: var(--box-shadow);
-            transition: var(--transition);
+            overflow: hidden;
         }
 
-        .location-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--box-shadow-hover);
-        }
-
-        .location-img {
-            width: 100%;
-            height: 100%;
-        }
-
-        .location-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-
-        .location-card:hover .location-img img {
-            transform: scale(1.1);
-        }
-
-        .location-overlay {
+        .testimonials::before {
+            content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 20px;
+            background: url('https://images.unsplash.com/photo-1560520031-3a4dc4e9de0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1467&q=80') no-repeat center center/cover;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .testimonials .section-title h2 {
             color: white;
         }
 
-        .location-title {
-            font-size: 1.4rem;
-            margin-bottom: 5px;
+        .testimonials .section-title h2::after {
+            background: var(--accent);
         }
 
-        .location-count {
-            font-size: 13px;
-            opacity: 0.9;
-        }
-
-        /* Why Choose Us */
-        .why-choose-us {
-            background-color: var(--light);
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
-        }
-
-        .feature-card {
-            background-color: var(--light);
-            border-radius: 8px;
-            padding: 35px 25px;
-            text-align: center;
-            box-shadow: var(--box-shadow);
-            transition: var(--transition);
-            border: 1px solid var(--light-gray);
-        }
-
-        .feature-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--box-shadow-hover);
-            border-color: var(--secondary);
-        }
-
-        .feature-icon {
-            font-size: 2.8rem;
-            color: var(--secondary);
-            margin-bottom: 20px;
-        }
-
-        .feature-title {
-            font-size: 1.3rem;
-            margin-bottom: 12px;
-            color: var(--accent);
-        }
-
-        .feature-description {
-            color: var(--gray);
-            font-size: 14px;
-        }
-
-        /* Enhanced Testimonials Section */
-        .testimonials {
-            background-color: var(--primary);
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .testimonials .section-title {
-            color: white;
-        }
-
-        .testimonials .section-subtitle {
+        .testimonials .section-title p {
             color: rgba(255, 255, 255, 0.8);
         }
 
-        .testimonial-container {
-            display: flex;
-            gap: 30px;
-            margin-top: 50px;
-            overflow-x: auto;
-            padding-bottom: 20px;
-            scroll-snap-type: x mandatory;
-        }
-
-        .testimonial-container::-webkit-scrollbar {
-            height: 8px;
-        }
-
-        .testimonial-container::-webkit-scrollbar-track {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-        }
-
-        .testimonial-container::-webkit-scrollbar-thumb {
-            background: var(--secondary);
-            border-radius: 10px;
-        }
-
-        .testimonial-card {
-            flex: 0 0 350px;
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 35px;
-            border-radius: 8px;
+        .testimonial-slider {
             position: relative;
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            scroll-snap-align: start;
-            transition: var(--transition);
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .testimonial-rating {
-            color: #FFD700;
-            margin-bottom: 15px;
-            font-size: 1.1rem;
+        .testimonial {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            margin: 0 1rem;
         }
 
         .testimonial-text {
+            font-size: 1.1rem;
             font-style: italic;
-            margin-bottom: 25px;
+            margin-bottom: 1.5rem;
             position: relative;
-            z-index: 1;
-            font-size: 1rem;
-            line-height: 1.7;
+        }
+
+        .testimonial-text::before,
+        .testimonial-text::after {
+            content: '"';
+            font-size: 2rem;
+            color: var(--accent);
+            opacity: 0.5;
+        }
+
+        .testimonial-text::before {
+            position: absolute;
+            top: -15px;
+            left: -10px;
+        }
+
+        .testimonial-text::after {
+            position: absolute;
+            bottom: -30px;
+            right: -10px;
         }
 
         .testimonial-author {
             display: flex;
             align-items: center;
-            gap: 15px;
+            justify-content: center;
         }
 
         .author-img {
@@ -657,8 +506,7 @@
             height: 60px;
             border-radius: 50%;
             overflow: hidden;
-            border: 2px solid var(--secondary);
-            flex-shrink: 0;
+            margin-right: 1rem;
         }
 
         .author-img img {
@@ -668,315 +516,187 @@
         }
 
         .author-info h4 {
-            margin-bottom: 5px;
-            color: white;
+            margin-bottom: 0.3rem;
         }
 
         .author-info p {
             color: rgba(255, 255, 255, 0.7);
-            font-size: 13px;
+            font-size: 0.9rem;
         }
 
-        .testimonial-date {
-            font-size: 12px;
-            color: rgba(255, 255, 255, 0.6);
-            margin-top: 5px;
-        }
-
-        /* Contact */
+        /* Contact Section */
         .contact {
-            background-color: var(--light);
+            background: linear-gradient(135deg, rgba(42, 93, 103, 0.05) 0%, rgba(58, 138, 122, 0.05) 100%);
         }
 
         .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            margin-top: 40px;
+            display: flex;
+            gap: 3rem;
         }
 
         .contact-info {
-            animation: fadeInLeft 1s ease;
+            flex: 1;
         }
 
         .contact-info h3 {
-            font-size: 1.6rem;
-            margin-bottom: 20px;
-            color: var(--accent);
+            color: var(--primary);
+            margin-bottom: 1.5rem;
         }
 
         .contact-details {
-            margin-bottom: 35px;
+            margin-bottom: 2rem;
         }
 
         .contact-item {
             display: flex;
             align-items: flex-start;
-            gap: 15px;
-            margin-bottom: 20px;
+            margin-bottom: 1.5rem;
         }
 
-        .contact-icon {
-            font-size: 1.3rem;
-            color: var(--secondary);
-            margin-top: 3px;
-            min-width: 25px;
-        }
-
-        .contact-text h4 {
-            margin-bottom: 5px;
+        .contact-item i {
             color: var(--accent);
-        }
-
-        .contact-text p, .contact-text a {
-            color: var(--gray);
-            font-size: 14px;
-        }
-
-        .contact-text a:hover {
-            color: var(--secondary);
-        }
-
-        .social-links {
-            display: flex;
-            gap: 12px;
-            margin-top: 25px;
-        }
-
-        .social-link {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: var(--light-gray);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: var(--transition);
-            font-size: 1rem;
-        }
-
-        .social-link:hover {
-            background-color: var(--secondary);
-            color: white;
-            transform: translateY(-3px);
+            font-size: 1.2rem;
+            margin-right: 1rem;
+            margin-top: 0.3rem;
         }
 
         .contact-form {
-            animation: fadeInRight 1s ease;
+            flex: 1;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
 
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-            color: var(--accent);
-            font-size: 14px;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 12px 18px;
-            border: 1px solid var(--light-gray);
-            border-radius: 4px;
-            font-family: inherit;
-            transition: var(--transition);
-            background-color: var(--light);
-            font-size: 14px;
-        }
-
-        .form-control:focus {
-            border-color: var(--secondary);
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.1);
-        }
-
-        textarea.form-control {
-            min-height: 140px;
-            resize: vertical;
-        }
-
-        /* Map */
-        .map-container {
-            height: 400px;
-            margin-top: 50px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: var(--box-shadow);
-            border: 1px solid var(--light-gray);
-        }
-
-        .map-container iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
+        .contact-form h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
         }
 
         /* Footer */
         footer {
-            background-color: var(--primary);
+            background: var(--dark);
             color: white;
-            padding: 80px 0 30px;
-            position: relative;
+            padding: 4rem 0 2rem;
         }
 
         .footer-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 50px;
-            margin-bottom: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
         }
 
-        .footer-col h3 {
-            font-size: 1.4rem;
-            margin-bottom: 20px;
+        .footer-col h4 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 1.5rem;
             position: relative;
-            padding-bottom: 12px;
-            color: white;
         }
 
-        .footer-col h3:after {
+        .footer-col h4::after {
             content: '';
             position: absolute;
-            bottom: 0;
-            left: 0;
             width: 50px;
             height: 2px;
-            background-color: var(--secondary);
+            background: var(--accent);
+            bottom: -8px;
+            left: 0;
         }
 
         .footer-col p {
-            opacity: 0.8;
-            margin-bottom: 20px;
-            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            list-style: none;
         }
 
         .footer-links li {
-            margin-bottom: 10px;
+            margin-bottom: 0.8rem;
         }
 
         .footer-links a {
-            opacity: 0.8;
-            transition: var(--transition);
-            display: inline-block;
-            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+            transition: color 0.3s;
         }
 
         .footer-links a:hover {
-            opacity: 1;
-            color: var(--secondary);
-            transform: translateX(5px);
+            color: var(--accent);
         }
 
-        .footer-newsletter input {
-            width: 100%;
-            padding: 12px 18px;
-            border: none;
-            border-radius: 4px;
-            margin-bottom: 12px;
-            font-family: inherit;
-            background-color: rgba(255, 255, 255, 0.1);
-            color: white;
-            font-size: 14px;
+        .social-links {
+            display: flex;
+            gap: 1rem;
         }
 
-        .footer-newsletter input::placeholder {
-            color: rgba(255, 255, 255, 0.7);
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: all 0.3s;
         }
 
-        .footer-newsletter .btn {
-            width: 100%;
+        .social-links a:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
         }
 
         .footer-bottom {
             text-align: center;
-            padding-top: 30px;
+            padding-top: 2rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
         }
 
-        .footer-bottom p {
-            opacity: 0.7;
-            font-size: 13px;
-        }
-
-        /* Back to Top Button */
-        .back-to-top {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            width: 45px;
-            height: 45px;
-            background-color: var(--secondary);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: var(--transition);
-            opacity: 0;
-            visibility: hidden;
-            z-index: 999;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .back-to-top.active {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .back-to-top:hover {
-            background-color: var(--primary);
-            transform: translateY(-3px);
-        }
-
-        /* AI Chatbot */
+        /* Chatbot */
         .chatbot-container {
             position: fixed;
             bottom: 30px;
             right: 30px;
-            z-index: 1000;
-            font-family: 'Inter', sans-serif;
+            z-index: 999;
         }
 
-        .chatbot-toggle {
+        .chatbot-btn {
             width: 60px;
             height: 60px;
-            background-color: var(--secondary);
+            background: var(--accent);
             color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 1.5rem;
             cursor: pointer;
-            box-shadow: 0 5px 15px rgba(0, 86, 179, 0.3);
-            transition: var(--transition);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
         }
 
-        .chatbot-toggle:hover {
+        .chatbot-btn:hover {
+            background: #e76f51;
             transform: scale(1.1);
         }
 
-        .chatbot-toggle i {
-            font-size: 1.5rem;
-        }
-
         .chatbot-window {
+            position: absolute;
+            bottom: 80px;
+            right: 0;
             width: 350px;
             height: 500px;
-            background-color: white;
+            background: white;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             overflow: hidden;
             display: none;
             flex-direction: column;
             transform: translateY(20px);
             opacity: 0;
-            transition: var(--transition);
+            transition: all 0.3s;
         }
 
         .chatbot-window.active {
@@ -986,17 +706,16 @@
         }
 
         .chatbot-header {
-            background-color: var(--primary);
+            background: var(--primary);
             color: white;
-            padding: 15px 20px;
+            padding: 1rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
 
-        .chatbot-header h3 {
-            font-size: 1.1rem;
-            margin: 0;
+        .chatbot-header h4 {
+            font-family: 'Montserrat', sans-serif;
         }
 
         .chatbot-close {
@@ -1009,91 +728,73 @@
 
         .chatbot-messages {
             flex: 1;
-            padding: 20px;
+            padding: 1rem;
             overflow-y: auto;
-            background-color: #f9f9f9;
+            background: #f9f9f9;
         }
 
         .message {
-            margin-bottom: 15px;
+            margin-bottom: 1rem;
             max-width: 80%;
-            padding: 10px 15px;
-            border-radius: 18px;
+            padding: 0.8rem 1rem;
+            border-radius: 15px;
             font-size: 0.9rem;
             line-height: 1.4;
+            position: relative;
         }
 
         .bot-message {
-            background-color: var(--light-gray);
-            color: var(--dark);
-            border-bottom-left-radius: 5px;
+            background: white;
+            border-top-left-radius: 0;
             align-self: flex-start;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .user-message {
-            background-color: var(--secondary);
+            background: var(--secondary);
             color: white;
-            border-bottom-right-radius: 5px;
+            border-top-right-radius: 0;
             align-self: flex-end;
-            margin-left: auto;
         }
 
         .chatbot-input {
             display: flex;
-            padding: 15px;
-            border-top: 1px solid var(--light-gray);
-            background-color: white;
+            padding: 1rem;
+            border-top: 1px solid #eee;
+            background: white;
         }
 
         .chatbot-input input {
             flex: 1;
-            padding: 10px 15px;
-            border: 1px solid var(--light-gray);
+            padding: 0.8rem;
+            border: 1px solid #ddd;
             border-radius: 30px;
             outline: none;
             font-family: inherit;
         }
 
         .chatbot-input button {
-            background-color: var(--secondary);
+            background: var(--accent);
             color: white;
             border: none;
             border-radius: 50%;
             width: 40px;
             height: 40px;
-            margin-left: 10px;
+            margin-left: 0.5rem;
             cursor: pointer;
-            transition: var(--transition);
+            transition: background 0.3s;
         }
 
         .chatbot-input button:hover {
-            background-color: var(--primary);
-        }
-
-        .quick-questions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 10px;
-        }
-
-        .quick-question {
-            background-color: white;
-            border: 1px solid var(--light-gray);
-            border-radius: 15px;
-            padding: 5px 12px;
-            font-size: 0.8rem;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .quick-question:hover {
-            background-color: var(--secondary);
-            color: white;
-            border-color: var(--secondary);
+            background: #e76f51;
         }
 
         /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -1105,170 +806,136 @@
             }
         }
 
-        @keyframes fadeInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes fadeInRight {
-            from {
-                opacity: 0;
-                transform: translateX(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
         .animate {
             opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
         }
 
-        .animated {
+        .animate.animated {
             opacity: 1;
-            transform: translateY(0);
         }
 
-        /* Responsive */
-        @media (max-width: 1200px) {
-            .section-title {
-                font-size: 2.2rem;
-            }
-            
-            .hero h1 {
-                font-size: 2.6rem;
-            }
+        .fadeIn {
+            animation: fadeIn 1s ease forwards;
         }
 
+        .fadeInUp {
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        /* Responsive Styles */
         @media (max-width: 992px) {
-            .section {
-                padding: 70px 0;
-            }
-            
+            .about-content,
             .contact-container {
-                grid-template-columns: 1fr;
-                gap: 40px;
+                flex-direction: column;
             }
-            
+
+            .about-img,
+            .about-text,
+            .contact-info,
+            .contact-form {
+                width: 100%;
+            }
+
             .hero h1 {
-                font-size: 2.2rem;
-            }
-            
-            .search-form {
-                grid-template-columns: 1fr 1fr;
+                font-size: 2.8rem;
             }
         }
 
         @media (max-width: 768px) {
-            .section {
-                padding: 60px 0;
+            .mobile-menu-btn {
+                display: block;
             }
-            
-            .section-title {
-                font-size: 1.9rem;
-            }
-            
-            .nav-links {
+
+            nav {
                 position: fixed;
                 top: 0;
                 right: -100%;
                 width: 80%;
-                max-width: 350px;
+                max-width: 300px;
                 height: 100vh;
-                background-color: var(--light);
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                gap: 25px;
-                transition: var(--transition);
-                box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
+                background: var(--primary);
+                padding: 2rem;
+                transition: right 0.3s;
                 z-index: 1001;
             }
-            
-            .nav-links.active {
+
+            nav.active {
                 right: 0;
             }
-            
-            .mobile-menu-btn {
-                display: block;
-                z-index: 1002;
-            }
-            
-            .hero {
-                min-height: 700px;
-            }
-            
-            .hero h1 {
-                font-size: 1.9rem;
-            }
-            
-            .hero-btns {
+
+            nav ul {
                 flex-direction: column;
-                gap: 12px;
+                margin-top: 2rem;
             }
-            
-            .search-form {
-                grid-template-columns: 1fr;
+
+            nav ul li {
+                margin: 1rem 0;
             }
-            
-            .footer-container {
-                gap: 35px;
+
+            .close-menu-btn {
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+                background: none;
+                border: none;
+                color: white;
+                font-size: 1.5rem;
+                cursor: pointer;
             }
-            
-            .chatbot-container {
-                bottom: 20px;
-                right: 20px;
+
+            .hero h1 {
+                font-size: 2.2rem;
             }
-            
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .btn {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.9rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
             .chatbot-window {
                 width: 300px;
                 height: 400px;
-                right: 0;
-                bottom: 70px;
             }
         }
 
         @media (max-width: 576px) {
-            .section {
-                padding: 50px 0;
+            .form-row {
+                flex-direction: column;
+                gap: 0;
             }
-            
-            .section-title {
-                font-size: 1.7rem;
-            }
-            
+
             .hero h1 {
-                font-size: 1.7rem;
+                font-size: 1.8rem;
             }
-            
-            .hero p {
-                font-size: 1rem;
+
+            .btn-group {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
             }
-            
-            .search-box {
-                padding: 20px;
-            }
-            
-            .properties-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .contact-item {
-                gap: 12px;
-            }
-            
-            .footer-container {
-                grid-template-columns: 1fr;
-                gap: 30px;
+
+            .btn-outline {
+                margin-left: 0;
             }
         }
     </style>
@@ -1278,22 +945,24 @@
     <header id="header">
         <div class="container header-container">
             <a href="#" class="logo">
-                <div class="logo-icon">
-                    <i class="fas fa-key"></i>
-                </div>
-                <span>XYZChange Rentals</span>
+                <i class="fas fa-home"></i>
+                <span>Top Estates Ltd
+</span>
             </a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#home" class="active">Home</a></li>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="mainNav">
+                <button class="close-menu-btn" id="closeMenuBtn">
+                    <i class="fas fa-times"></i>
+                </button>
+                <ul>
+                    <li><a href="#home">Home</a></li>
                     <li><a href="#properties">Properties</a></li>
-                    <li><a href="#locations">Locations</a></li>
-                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <div class="mobile-menu-btn">
-                    <i class="fas fa-bars"></i>
-                </div>
             </nav>
         </div>
     </header>
@@ -1302,48 +971,61 @@
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
-                <h1>Premium Rental Properties Across the UK</h1>
-                <p>Discover exceptional homes in London, Manchester, Edinburgh and beyond with our curated selection of luxury rental properties.</p>
-                <div class="hero-btns">
-                    <a href="#properties" class="btn"><i class="fas fa-search"></i> Browse Properties</a>
-                    <a href="#contact" class="btn btn-outline"><i class="fas fa-home"></i> List Your Property</a>
+                <h1>Find Your Dream Home in the UK</h1>
+                <p>Discover premium properties across London, Manchester, Birmingham and more. Let us guide you to your perfect home.</p>
+                <div class="btn-group">
+                    <a href="#properties" class="btn">Browse Properties</a>
+                    <a href="#contact" class="btn btn-outline">Contact Us</a>
                 </div>
-                <div class="search-box">
-                    <h3>Find Your Ideal Rental</h3>
-                    <form class="search-form">
-                        <select name="location">
-                            <option value="">All Locations</option>
-                            <option value="london">London</option>
-                            <option value="manchester">Manchester</option>
-                            <option value="birmingham">Birmingham</option>
-                            <option value="edinburgh">Edinburgh</option>
-                            <option value="liverpool">Liverpool</option>
-                            <option value="bristol">Bristol</option>
-                        </select>
-                        <select name="type">
-                            <option value="">Property Type</option>
-                            <option value="apartment">Apartment</option>
-                            <option value="house">House</option>
-                            <option value="studio">Studio</option>
-                            <option value="flat">Flat</option>
-                            <option value="villa">Villa</option>
-                        </select>
-                        <select name="bedrooms">
-                            <option value="">Bedrooms</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4+">4+</option>
-                        </select>
-                        <select name="price">
-                            <option value="">Max Monthly Rent</option>
-                            <option value="1000">£1,000</option>
-                            <option value="1500">£1,500</option>
-                            <option value="2000">£2,000</option>
-                            <option value="2500">£2,500</option>
-                            <option value="3000">£3,000+</option>
-                        </select>
-                        <button type="submit" class="btn"><i class="fas fa-search"></i> Search Now</button>
+                <div class="search-form">
+                    <h3>Search Properties</h3>
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="location">Location</label>
+                                <select id="location" class="form-control">
+                                    <option value="">Anywhere</option>
+                                    <option value="london">London</option>
+                                    <option value="manchester">Manchester</option>
+                                    <option value="birmingham">Birmingham</option>
+                                    <option value="liverpool">Liverpool</option>
+                                    <option value="leeds">Leeds</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="type">Property Type</label>
+                                <select id="type" class="form-control">
+                                    <option value="">Any Type</option>
+                                    <option value="house">House</option>
+                                    <option value="flat">Flat/Apartment</option>
+                                    <option value="bungalow">Bungalow</option>
+                                    <option value="cottage">Cottage</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="bedrooms">Bedrooms</label>
+                                <select id="bedrooms" class="form-control">
+                                    <option value="">Any</option>
+                                    <option value="1">1+</option>
+                                    <option value="2">2+</option>
+                                    <option value="3">3+</option>
+                                    <option value="4">4+</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="price">Max Price</label>
+                                <select id="price" class="form-control">
+                                    <option value="">No Max</option>
+                                    <option value="200000">£200,000</option>
+                                    <option value="300000">£300,000</option>
+                                    <option value="400000">£400,000</option>
+                                    <option value="500000">£500,000</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%;">Search Now</button>
                     </form>
                 </div>
             </div>
@@ -1351,126 +1033,135 @@
     </section>
 
     <!-- Featured Properties -->
-    <section class="section featured-properties" id="properties">
+    <section class="section" id="properties">
         <div class="container">
-            <div class="text-center">
-                <h2 class="section-title">Featured Properties</h2>
-                <p class="section-subtitle">Our selection of premium rental homes across the UK's most desirable locations</p>
+            <div class="section-title">
+                <h2>Featured Properties</h2>
+                <p>Explore our curated selection of premium properties across the UK's most desirable locations.</p>
             </div>
-            
-            <div class="properties-filter">
-                <button class="filter-btn active" data-filter="all">All Properties</button>
-                <button class="filter-btn" data-filter="london">London</button>
-                <button class="filter-btn" data-filter="manchester">Manchester</button>
-                <button class="filter-btn" data-filter="edinburgh">Edinburgh</button>
-                <button class="filter-btn" data-filter="birmingham">Birmingham</button>
-            </div>
-            
             <div class="properties-grid">
                 <!-- Property 1 -->
-                <div class="property-card animate" data-location="london">
+                <div class="property-card animate fadeInUp">
                     <div class="property-img">
-                        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Modern Apartment in London">
-                        <span class="property-tag">Available Now</span>
+                        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Modern London Apartment">
+                        <span class="property-badge">For Sale</span>
                     </div>
-                    <div class="property-info">
-                        <div class="property-price">£2,750 <span>/ month</span></div>
-                        <h3 class="property-title">Luxury Riverside Apartment</h3>
-                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Canary Wharf, London</p>
+                    <div class="property-details">
+                        <div class="property-price">£450,000 <span>/ Freehold</span></div>
+                        <h3>Modern Apartment in Kensington</h3>
+                        <div class="property-address">Kensington, London, W8</div>
                         <div class="property-features">
-                            <div class="property-feature"><i class="fas fa-bed"></i> 2 Beds</div>
-                            <div class="property-feature"><i class="fas fa-bath"></i> 2 Baths</div>
-                            <div class="property-feature"><i class="fas fa-vector-square"></i> 950 sqft</div>
+                            <div class="feature">
+                                <i class="fas fa-bed"></i>
+                                <span>2 Bed</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bath"></i>
+                                <span>2 Bath</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-ruler-combined"></i>
+                                <span>850 sqft</span>
+                            </div>
                         </div>
+                        <a href="#" class="btn" style="width: 100%; text-align: center;">View Details</a>
                     </div>
                 </div>
-                
+
                 <!-- Property 2 -->
-                <div class="property-card animate" data-location="manchester">
+                <div class="property-card animate fadeInUp delay-1">
                     <div class="property-img">
-                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Contemporary Flat in Manchester">
-                        <span class="property-tag">Available Now</span>
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Luxury Manchester House">
+                        <span class="property-badge">For Rent</span>
                     </div>
-                    <div class="property-info">
-                        <div class="property-price">£1,450 <span>/ month</span></div>
-                        <h3 class="property-title">Contemporary City Center Flat</h3>
-                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Spinningfields, Manchester</p>
+                    <div class="property-details">
+                        <div class="property-price">£1,800 <span>/ month</span></div>
+                        <h3>Luxury Townhouse in Didsbury</h3>
+                        <div class="property-address">Didsbury, Manchester, M20</div>
                         <div class="property-features">
-                            <div class="property-feature"><i class="fas fa-bed"></i> 1 Bed</div>
-                            <div class="property-feature"><i class="fas fa-bath"></i> 1 Bath</div>
-                            <div class="property-feature"><i class="fas fa-vector-square"></i> 650 sqft</div>
+                            <div class="feature">
+                                <i class="fas fa-bed"></i>
+                                <span>3 Bed</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bath"></i>
+                                <span>2.5 Bath</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-ruler-combined"></i>
+                                <span>1,450 sqft</span>
+                            </div>
                         </div>
+                        <a href="#" class="btn" style="width: 100%; text-align: center;">View Details</a>
                     </div>
                 </div>
-                
+
                 <!-- Property 3 -->
-                <div class="property-card animate" data-location="edinburgh">
+                <div class="property-card animate fadeInUp delay-2">
                     <div class="property-img">
-                        <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Victorian Townhouse in Edinburgh">
-                        <span class="property-tag">Available Now</span>
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Countryside Cottage">
+                        <span class="property-badge">For Sale</span>
                     </div>
-                    <div class="property-info">
-                        <div class="property-price">£1,850 <span>/ month</span></div>
-                        <h3 class="property-title">Victorian Townhouse</h3>
-                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> New Town, Edinburgh</p>
+                    <div class="property-details">
+                        <div class="property-price">£325,000 <span>/ Freehold</span></div>
+                        <h3>Charming Cottage in Cotswolds</h3>
+                        <div class="property-address">Stow-on-the-Wold, GL54</div>
                         <div class="property-features">
-                            <div class="property-feature"><i class="fas fa-bed"></i> 3 Beds</div>
-                            <div class="property-feature"><i class="fas fa-bath"></i> 2 Baths</div>
-                            <div class="property-feature"><i class="fas fa-vector-square"></i> 1,250 sqft</div>
+                            <div class="feature">
+                                <i class="fas fa-bed"></i>
+                                <span>2 Bed</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bath"></i>
+                                <span>1 Bath</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-ruler-combined"></i>
+                                <span>1,200 sqft</span>
+                            </div>
                         </div>
+                        <a href="#" class="btn" style="width: 100%; text-align: center;">View Details</a>
                     </div>
                 </div>
-                
-                <!-- Property 4 -->
-                <div class="property-card animate" data-location="birmingham">
-                    <div class="property-img">
-                        <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Modern Penthouse in Birmingham">
-                        <span class="property-tag">Available Now</span>
-                    </div>
-                    <div class="property-info">
-                        <div class="property-price">£2,100 <span>/ month</span></div>
-                        <h3 class="property-title">Modern City Penthouse</h3>
-                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Birmingham City Center</p>
-                        <div class="property-features">
-                            <div class="property-feature"><i class="fas fa-bed"></i> 2 Beds</div>
-                            <div class="property-feature"><i class="fas fa-bath"></i> 2 Baths</div>
-                            <div class="property-feature"><i class="fas fa-vector-square"></i> 1,100 sqft</div>
-                        </div>
-                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-img animate fadeIn">
+                    <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Top Estates Ltd
+ Team">
                 </div>
-                
-                <!-- Property 5 -->
-                <div class="property-card animate" data-location="london">
-                    <div class="property-img">
-                        <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Luxury Apartment in London">
-                        <span class="property-tag">Available Now</span>
-                    </div>
-                    <div class="property-info">
-                        <div class="property-price">£3,200 <span>/ month</span></div>
-                        <h3 class="property-title">Luxury Chelsea Apartment</h3>
-                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Chelsea, London</p>
-                        <div class="property-features">
-                            <div class="property-feature"><i class="fas fa-bed"></i> 2 Beds</div>
-                            <div class="property-feature"><i class="fas fa-bath"></i> 2 Baths</div>
-                            <div class="property-feature"><i class="fas fa-vector-square"></i> 1,150 sqft</div>
+                <div class="about-text animate fadeIn delay-1">
+                    <h2>About Top Estates Ltd
+</h2>
+                    <p>Founded in 2010, Top Estates Ltd
+ has established itself as one of the UK's most trusted property specialists. With offices in London, Manchester, and Birmingham, we've helped thousands of clients find their perfect homes.</p>
+                    <p>Our team of experienced agents combines local market knowledge with a personalized approach to ensure a seamless property journey for both buyers and sellers.</p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <i class="fas fa-medal"></i>
+                            <div>
+                                <h4>Award-Winning Service</h4>
+                                <p>Recognized as Best Real Estate Agency UK 2022 by the Property Awards.</p>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                
-                <!-- Property 6 -->
-                <div class="property-card animate" data-location="manchester">
-                    <div class="property-img">
-                        <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Modern House in Manchester">
-                        <span class="property-tag">Available Now</span>
-                    </div>
-                    <div class="property-info">
-                        <div class="property-price">£1,950 <span>/ month</span></div>
-                        <h3 class="property-title">Modern Suburban House</h3>
-                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Didsbury, Manchester</p>
-                        <div class="property-features">
-                            <div class="property-feature"><i class="fas fa-bed"></i> 3 Beds</div>
-                            <div class="property-feature"><i class="fas fa-bath"></i> 1 Bath</div>
-                            <div class="property-feature"><i class="fas fa-vector-square"></i> 1,350 sqft</div>
+                        <div class="about-feature">
+                            <i class="fas fa-pound-sign"></i>
+                            <div>
+                                <h4>Competitive Rates</h4>
+                                <p>We offer some of the most competitive commission rates in the industry.</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-handshake"></i>
+                            <div>
+                                <h4>Trusted Network</h4>
+                                <p>Over 10,000 satisfied clients and growing every day.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1478,243 +1169,26 @@
         </div>
     </section>
 
-    <!-- Popular Locations -->
-    <section class="section popular-locations" id="locations">
+    <!-- Testimonials Section -->
+    <section class="section testimonials" id="testimonials">
         <div class="container">
-            <div class="text-center">
-                <h2 class="section-title">Popular Locations</h2>
-                <p class="section-subtitle">Explore our most sought-after rental destinations across the United Kingdom</p>
+            <div class="section-title">
+                <h2>What Our Clients Say</h2>
+                <p>Don't just take our word for it - hear from some of our happy clients.</p>
             </div>
-            
-            <div class="locations-grid">
-                <!-- Location 1 -->
-                <div class="location-card animate">
-                    <div class="location-img">
-                        <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="London">
+            <div class="testimonial-slider">
+                <div class="testimonial animate fadeIn">
+                    <div class="testimonial-text">
+                        Top Estates Ltd
+ made the entire home buying process so smooth. Their knowledge of the London market was impressive and they negotiated a great deal for us. Couldn't be happier with our new home!
                     </div>
-                    <div class="location-overlay">
-                        <h3 class="location-title">London</h3>
-                        <p class="location-count">24 Properties Available</p>
-                    </div>
-                </div>
-                
-                <!-- Location 2 -->
-                <div class="location-card animate">
-                    <div class="location-img">
-                        <img src="https://images.unsplash.com/photo-1515586838455-8f8f940d6853?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1493&q=80" alt="Manchester">
-                    </div>
-                    <div class="location-overlay">
-                        <h3 class="location-title">Manchester</h3>
-                        <p class="location-count">18 Properties Available</p>
-                    </div>
-                </div>
-                
-                <!-- Location 3 -->
-                <div class="location-card animate">
-                    <div class="location-img">
-                        <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1476&q=80" alt="Edinburgh">
-                    </div>
-                    <div class="location-overlay">
-                        <h3 class="location-title">Edinburgh</h3>
-                        <p class="location-count">15 Properties Available</p>
-                    </div>
-                </div>
-                
-                <!-- Location 4 -->
-                <div class="location-card animate">
-                    <div class="location-img">
-                        <img src="https://images.unsplash.com/photo-1584697964358-3e14ca57658b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Birmingham">
-                    </div>
-                    <div class="location-overlay">
-                        <h3 class="location-title">Birmingham</h3>
-                        <p class="location-count">12 Properties Available</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us -->
-    <section class="section why-choose-us" id="services">
-        <div class="container">
-            <div class="text-center">
-                <h2 class="section-title">Why Choose XYZChange Rentals</h2>
-                <p class="section-subtitle">We're redefining the rental experience with exceptional service and premium properties</p>
-            </div>
-            
-            <div class="features-grid">
-                <!-- Feature 1 -->
-                <div class="feature-card animate">
-                    <div class="feature-icon">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <h3 class="feature-title">Premium Properties</h3>
-                    <p class="feature-description">Our curated selection includes only the highest quality homes in the most desirable locations across the UK.</p>
-                </div>
-                
-                <!-- Feature 2 -->
-                <div class="feature-card animate">
-                    <div class="feature-icon">
-                        <i class="fas fa-search-dollar"></i>
-                    </div>
-                    <h3 class="feature-title">Transparent Pricing</h3>
-                    <p class="feature-description">No hidden fees or surprises. We provide clear, competitive pricing for all our rental properties.</p>
-                </div>
-                
-                <!-- Feature 3 -->
-                <div class="feature-card animate">
-                    <div class="feature-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3 class="feature-title">24/7 Support</h3>
-                    <p class="feature-description">Our dedicated team is available around the clock to assist with any questions or maintenance needs.</p>
-                </div>
-                
-                <!-- Feature 4 -->
-                <div class="feature-card animate">
-                    <div class="feature-icon">
-                        <i class="fas fa-file-contract"></i>
-                    </div>
-                    <h3 class="feature-title">Streamlined Process</h3>
-                    <p class="feature-description">From viewing to moving in, we've simplified every step to make your rental experience seamless.</p>
-                </div>
-                
-                <!-- Feature 5 -->
-                <div class="feature-card animate">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3 class="feature-title">Verified Listings</h3>
-                    <p class="feature-description">Every property is personally inspected to ensure it meets our high standards before listing.</p>
-                </div>
-                
-                <!-- Feature 6 -->
-                <div class="feature-card animate">
-                    <div class="feature-icon">
-                        <i class="fas fa-pound-sign"></i>
-                    </div>
-                    <h3 class="feature-title">Flexible Terms</h3>
-                    <p class="feature-description">We offer flexible lease terms to accommodate your specific needs and timeline.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="section testimonials">
-        <div class="container">
-            <div class="text-center">
-                <h2 class="section-title">Client Experiences</h2>
-                <p class="section-subtitle">Don't just take our word for it - hear from our satisfied clients</p>
-            </div>
-            
-            <div class="testimonial-container">
-                <!-- Testimonial 1 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"After relocating from New York, I was overwhelmed by the London rental market. XYZChange not only found me a stunning riverside apartment but negotiated better terms than I could have secured on my own. Their local expertise saved me both time and money."</p>
                     <div class="testimonial-author">
                         <div class="author-img">
-                            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah Johnson">
+                            <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Sarah Johnson">
                         </div>
                         <div class="author-info">
                             <h4>Sarah Johnson</h4>
-                            <p>Marketing Director</p>
-                            <div class="testimonial-date">15 March 2023</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Testimonial 2 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"As a first-time renter in the UK, I was nervous about the process. XYZChange guided me through every step, explaining all the paperwork and even helping me set up utilities. Their patience and professionalism made what could have been stressful completely straightforward."</p>
-                    <div class="testimonial-author">
-                        <div class="author-img">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="David Chen">
-                        </div>
-                        <div class="author-info">
-                            <h4>David Chen</h4>
-                            <p>Software Engineer</p>
-                            <div class="testimonial-date">2 April 2023</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Testimonial 3 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <p class="testimonial-text">"When our boiler stopped working in December, XYZChange had an engineer at our door within two hours. Their responsive maintenance team has solved every issue we've had, no matter how small. It's this level of service that makes them stand out from other agencies."</p>
-                    <div class="testimonial-author">
-                        <div class="author-img">
-                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emily Wilson">
-                        </div>
-                        <div class="author-info">
-                            <h4>Emily Wilson</h4>
-                            <p>University Lecturer</p>
-                            <div class="testimonial-date">22 May 2023</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Testimonial 4 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"We needed temporary housing during our home renovation and XYZChange found us the perfect furnished apartment. Their flexible six-month lease and all-inclusive package meant we could focus on our project without worrying about utility setups or furniture."</p>
-                    <div class="testimonial-author">
-                        <div class="author-img">
-                            <img src="https://randomuser.me/api/portraits/men/55.jpg" alt="James Robertson">
-                        </div>
-                        <div class="author-info">
-                            <h4>James Robertson</h4>
-                            <p>Property Owner</p>
-                            <div class="testimonial-date">10 June 2023</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Testimonial 5 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"As an international student, I was worried about finding accommodation before arriving in the UK. XYZChange conducted virtual viewings, handled all the paperwork remotely, and even arranged for a welcome pack with essentials to be waiting when I arrived. Exceptional service!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-img">
-                            <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Lisa Müller">
-                        </div>
-                        <div class="author-info">
-                            <h4>Lisa Müller</h4>
-                            <p>International Student</p>
-                            <div class="testimonial-date">5 July 2023</div>
+                            <p>Homeowner in Chelsea</p>
                         </div>
                     </div>
                 </div>
@@ -1722,102 +1196,75 @@
         </div>
     </section>
 
-    <!-- Contact -->
+    <!-- Contact Section -->
     <section class="section contact" id="contact">
         <div class="container">
-            <div class="text-center">
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="section-subtitle">Have questions or ready to find your next home? Contact our team today.</p>
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p>Have questions about a property or need advice? Our team is here to help.</p>
             </div>
-            
             <div class="contact-container">
-                <div class="contact-info">
+                <div class="contact-info animate fadeIn">
                     <h3>Contact Information</h3>
                     <div class="contact-details">
                         <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h4>Our Office</h4>
-                                <p>123 Property Way, London, E1 6AN</p>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Head Office</h4>
+                                <p>45 Berkeley Square, Mayfair, London W1J 5AS</p>
                             </div>
                         </div>
-                        
                         <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone-alt"></i>
-                            </div>
-                            <div class="contact-text">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
                                 <h4>Phone</h4>
-                                <a href="tel:+442045678901">+44 20 4567 8901</a>
+                                <p>+44 20 7123 4567</p>
                             </div>
                         </div>
-                        
                         <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="contact-text">
+                            <i class="fas fa-envelope"></i>
+                            <div>
                                 <h4>Email</h4>
-                                <a href="mailto:info@xyzchangerentals.com">info@xyzchangerentals.com</a>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h4>Opening Hours</h4>
-                                <p>Monday - Friday: 9am - 7pm<br>Saturday: 10am - 4pm</p>
+                                <p>info@thewellestates.co.uk</p>
                             </div>
                         </div>
                     </div>
-                    
-                    <h3>Follow Us</h3>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+                    <h3>Opening Hours</h3>
+                    <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                    <p>Saturday: 10:00 AM - 4:00 PM</p>
+                    <p>Sunday: Closed</p>
                 </div>
-                
-                <div class="contact-form">
+                <div class="contact-form animate fadeIn delay-1">
+                    <h3>Send Us a Message</h3>
                     <form>
                         <div class="form-group">
                             <label for="name">Your Name</label>
-                            <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+                            <input type="text" id="name" class="form-control" required>
                         </div>
-                        
                         <div class="form-group">
                             <label for="email">Email Address</label>
-                            <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                            <input type="email" id="email" class="form-control" required>
                         </div>
-                        
                         <div class="form-group">
                             <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" class="form-control" placeholder="Enter your phone number">
+                            <input type="tel" id="phone" class="form-control">
                         </div>
-                        
                         <div class="form-group">
                             <label for="subject">Subject</label>
-                            <input type="text" id="subject" class="form-control" placeholder="Enter subject">
+                            <select id="subject" class="form-control">
+                                <option value="">Select a subject</option>
+                                <option value="property-inquiry">Property Inquiry</option>
+                                <option value="valuation">Free Valuation</option>
+                                <option value="general">General Question</option>
+                            </select>
                         </div>
-                        
                         <div class="form-group">
-                            <label for="message">Your Message</label>
-                            <textarea id="message" class="form-control" placeholder="Enter your message" required></textarea>
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" rows="5" required></textarea>
                         </div>
-                        
                         <button type="submit" class="btn">Send Message</button>
                     </form>
                 </div>
-            </div>
-            
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.5404230563876!2d-0.07264668422991268!3d51.51151597963595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876034add2a4013%3A0x260eae8d9d68bdd9!2sOxford%20St%2C%20London!5e0!3m2!1sen!2suk!4v1623256789012!5m2!1sen!2suk" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
@@ -1827,80 +1274,72 @@
         <div class="container">
             <div class="footer-container">
                 <div class="footer-col">
-                    <h3>About XYZChange</h3>
-                    <p>XYZChange Rentals is a premier UK rental property agency specializing in high-quality homes in the most desirable locations across the country.</p>
+                    <h4>Top Estates Ltd
+</h4>
+                    <p>Premium property specialists serving the UK since 2010. Let us guide you home.</p>
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                
                 <div class="footer-col">
-                    <h3>Quick Links</h3>
+                    <h4>Quick Links</h4>
                     <ul class="footer-links">
                         <li><a href="#home">Home</a></li>
                         <li><a href="#properties">Properties</a></li>
-                        <li><a href="#locations">Locations</a></li>
-                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
-                
                 <div class="footer-col">
-                    <h3>Services</h3>
+                    <h4>Properties</h4>
                     <ul class="footer-links">
-                        <li><a href="#">Property Management</a></li>
-                        <li><a href="#">Tenant Services</a></li>
-                        <li><a href="#">Landlord Services</a></li>
-                        <li><a href="#">Short-Term Rentals</a></li>
-                        <li><a href="#">Corporate Housing</a></li>
+                        <li><a href="#">For Sale</a></li>
+                        <li><a href="#">For Rent</a></li>
+                        <li><a href="#">New Developments</a></li>
+                        <li><a href="#">Commercial</a></li>
+                        <li><a href="#">Investment Properties</a></li>
                     </ul>
                 </div>
-                
                 <div class="footer-col">
-                    <h3>Newsletter</h3>
-                    <p>Subscribe to our newsletter for the latest property listings and market updates.</p>
-                    <div class="footer-newsletter">
-                        <input type="email" placeholder="Your email address">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to our newsletter for the latest property updates and market insights.</p>
+                    <form>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
                         <button type="submit" class="btn">Subscribe</button>
-                    </div>
+                    </form>
                 </div>
             </div>
-            
             <div class="footer-bottom">
-                <p>&copy; 2023 XYZChange Rentals. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+                <p>&copy; 2023 Top Estates Ltd
+. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
             </div>
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <div class="back-to-top">
-        <i class="fas fa-arrow-up"></i>
-    </div>
-
-    <!-- AI Chatbot -->
+    <!-- Chatbot -->
     <div class="chatbot-container">
-        <div class="chatbot-toggle" id="chatbotToggle">
-            <i class="fas fa-comment-dots"></i>
-        </div>
         <div class="chatbot-window" id="chatbotWindow">
             <div class="chatbot-header">
-                <h3>XYZChange Assistant</h3>
+                <h4>Top Estates Ltd
+ Assistant</h4>
                 <button class="chatbot-close" id="chatbotClose">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
             <div class="chatbot-messages" id="chatbotMessages">
                 <div class="message bot-message">
-                    Hello! I'm your XYZChange rental assistant. How can I help you today?
-                    <div class="quick-questions">
-                        <div class="quick-question">How do I apply for a property?</div>
-                        <div class="quick-question">What are your fees?</div>
-                        <div class="quick-question">Do you offer short-term rentals?</div>
-                        <div class="quick-question">How do I list my property?</div>
-                    </div>
+                    Hello! I'm your Well Estates assistant. How can I help you today? Here are some common questions:
+                    <br><br>
+                    • What properties do you have in London?<br>
+                    • How can I book a viewing?<br>
+                    • What's the rental process?<br>
+                    • Can you help me sell my property?
                 </div>
             </div>
             <div class="chatbot-input">
@@ -1908,129 +1347,41 @@
                 <button id="chatbotSend"><i class="fas fa-paper-plane"></i></button>
             </div>
         </div>
+        <button class="chatbot-btn" id="chatbotBtn">
+            <i class="fas fa-comment-dots"></i>
+        </button>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         // Mobile Menu Toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const navLinks = document.querySelector('.nav-links');
-        
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const closeMenuBtn = document.getElementById('closeMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+
         mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
-                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+            mainNav.classList.add('active');
         });
-        
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-            });
+
+        closeMenuBtn.addEventListener('click', () => {
+            mainNav.classList.remove('active');
         });
-        
-        // Sticky Header
+
+        // Header Scroll Effect
+        const header = document.getElementById('header');
         window.addEventListener('scroll', () => {
-            const header = document.getElementById('header');
-            header.classList.toggle('sticky', window.scrollY > 0);
-        });
-        
-        // Active link based on scroll position
-        const sections = document.querySelectorAll('section');
-        const navItems = document.querySelectorAll('.nav-links a');
-        
-        window.addEventListener('scroll', () => {
-            let current = '';
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                
-                if (pageYOffset >= sectionTop - 300) {
-                    current = section.getAttribute('id');
-                }
-            });
-            
-            navItems.forEach(item => {
-                item.classList.remove('active');
-                if (item.getAttribute('href') === `#${current}`) {
-                    item.classList.add('active');
-                }
-            });
-        });
-        
-        // Property Filter
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const propertyCards = document.querySelectorAll('.property-card');
-        
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Remove active class from all buttons
-                filterBtns.forEach(btn => btn.classList.remove('active'));
-                // Add active class to clicked button
-                btn.classList.add('active');
-                
-                const filter = btn.getAttribute('data-filter');
-                
-                propertyCards.forEach(card => {
-                    if (filter === 'all' || card.getAttribute('data-location') === filter) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
-        });
-        
-        // Back to Top Button
-        const backToTopBtn = document.querySelector('.back-to-top');
-        
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopBtn.classList.add('active');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
             } else {
-                backToTopBtn.classList.remove('active');
+                header.classList.remove('scrolled');
             }
         });
-        
-        backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-        
-        // Scroll Animation
-        const animateElements = document.querySelectorAll('.animate');
-        
-        const animateOnScroll = () => {
-            animateElements.forEach(element => {
-                const elementPosition = element.getBoundingClientRect().top;
-                const screenPosition = window.innerHeight / 1.3;
-                
-                if (elementPosition < screenPosition) {
-                    element.classList.add('animated');
-                }
-            });
-        };
-        
-        window.addEventListener('scroll', animateOnScroll);
-        
-        // Initialize animations on page load
-        animateOnScroll();
 
-        // Chatbot Functionality
-        const chatbotToggle = document.getElementById('chatbotToggle');
-        const chatbotClose = document.getElementById('chatbotClose');
+        // Chatbot Toggle
+        const chatbotBtn = document.getElementById('chatbotBtn');
         const chatbotWindow = document.getElementById('chatbotWindow');
-        const chatbotMessages = document.getElementById('chatbotMessages');
-        const chatbotInput = document.getElementById('chatbotInput');
-        const chatbotSend = document.getElementById('chatbotSend');
-        const quickQuestions = document.querySelectorAll('.quick-question');
+        const chatbotClose = document.getElementById('chatbotClose');
 
-        // Toggle chatbot window
-        chatbotToggle.addEventListener('click', () => {
+        chatbotBtn.addEventListener('click', () => {
             chatbotWindow.classList.toggle('active');
         });
 
@@ -2038,74 +1389,93 @@
             chatbotWindow.classList.remove('active');
         });
 
+        // Chatbot Functionality
+        const chatbotMessages = document.getElementById('chatbotMessages');
+        const chatbotInput = document.getElementById('chatbotInput');
+        const chatbotSend = document.getElementById('chatbotSend');
+
         // Chatbot responses
         const chatbotResponses = {
-            "hello": "Hello! How can I assist you with your rental needs today?",
-            "hi": "Hi there! What can I help you with regarding XYZChange Rentals?",
-            "how do i apply for a property": "To apply for a property, please follow these steps:<br>1. Schedule a viewing (in-person or virtual)<br>2. Complete our online application form<br>3. Provide required documents (ID, proof of income, references)<br>4. Pay the holding deposit (typically one week's rent)<br><br>Would you like me to send you the application link?",
-            "what are your fees": "Our fees are transparent and competitive:<br>- Tenant fees: One week's rent + deposit (5 weeks rent)<br>- Landlord fees: 10-15% of monthly rent (depending on service level)<br><br>All fees are clearly outlined before you commit to anything. We never charge hidden fees.",
-            "do you offer short-term rentals": "Yes, we offer flexible short-term rentals starting from 1 month. Our minimum contract length is typically 6 months, but we can arrange shorter stays for:<br>- Corporate clients<br>- Students<br>- Temporary relocations<br>- Home renovation periods",
-            "how do i list my property": "Listing your property with us is easy:<br>1. Contact our team for a free valuation<br>2. We'll arrange professional photography and floor plans<br>3. Sign our straightforward management agreement<br>4. We'll market your property across 25+ platforms<br><br>Would you like me to connect you with our listings team?",
-            "what areas do you cover": "We currently cover all major UK cities including:<br>- London<br>- Manchester<br>- Birmingham<br>- Edinburgh<br>- Bristol<br>- Liverpool<br><br>We're expanding to new locations regularly!",
-            "what documents do i need": "For tenants, you'll typically need:<br>- Photo ID (passport or driving license)<br>- Proof of address (utility bill or bank statement)<br>- Proof of income (3 months payslips or accountant letter)<br>- Previous landlord reference<br>- Right to Rent documentation (for non-UK citizens)",
-            "default": "I'm sorry, I didn't understand that. Could you rephrase your question or try one of these common queries:<br>- How do I apply for a property?<br>- What are your fees?<br>- Do you offer short-term rentals?<br>- How do I list my property?"
+            "hello": "Hello! How can I assist you with your property needs today?",
+            "hi": "Hi there! Welcome to Top Estates Ltd
+. What can I help you with?",
+            "properties in london": "We have a wide range of properties in London. Would you like to see flats, houses, or something specific? You can also browse our <a href='#properties'>featured properties</a> or use the search form on our homepage.",
+            "book a viewing": "To book a viewing, please provide the property reference number or address you're interested in. Alternatively, you can call us at +44 20 7123 4567 or fill out the <a href='#contact'>contact form</a>.",
+            "rental process": "Our rental process is simple: 1) View the property 2) Submit an application 3) Provide references 4) Sign the tenancy agreement 5) Pay deposit and first month's rent. Would you like more details on any of these steps?",
+            "sell my property": "We'd be happy to help you sell your property! Our process includes: 1) Free valuation 2) Professional photography 3) Marketing across multiple platforms 4) Viewings 5) Offers and completion. Would you like to schedule a valuation?",
+            "contact": "You can reach us at:<br>Phone: +44 20 7123 4567<br>Email: info@thewellestates.co.uk<br>Or visit our <a href='#contact'>contact page</a> for more options.",
+            "thank you": "You're welcome! Is there anything else I can help you with?",
+            "default": "I'm sorry, I didn't understand that. Could you rephrase your question or ask about one of these topics:<br><br>• Properties in specific areas<br>• Booking viewings<br>• Rental information<br>• Selling your property<br>• Contact details"
         };
 
+        // Send message function
+        function sendMessage() {
+            const message = chatbotInput.value.trim();
+            if (message === '') return;
+
+            // Add user message
+            addMessage(message, 'user-message');
+
+            // Process and respond
+            setTimeout(() => {
+                let response = "default";
+                const lowerMessage = message.toLowerCase();
+                
+                if (lowerMessage.includes('hello') || lowerMessage.includes('hi')) {
+                    response = "hello";
+                } else if (lowerMessage.includes('london')) {
+                    response = "properties in london";
+                } else if (lowerMessage.includes('viewing') || lowerMessage.includes('book')) {
+                    response = "book a viewing";
+                } else if (lowerMessage.includes('rent') || lowerMessage.includes('let')) {
+                    response = "rental process";
+                } else if (lowerMessage.includes('sell') || lowerMessage.includes('valuation')) {
+                    response = "sell my property";
+                } else if (lowerMessage.includes('contact') || lowerMessage.includes('call')) {
+                    response = "contact";
+                } else if (lowerMessage.includes('thank')) {
+                    response = "thank you";
+                }
+
+                addMessage(chatbotResponses[response], 'bot-message');
+            }, 500);
+
+            chatbotInput.value = '';
+        }
+
         // Add message to chat
-        function addMessage(message, isUser) {
+        function addMessage(text, className) {
             const messageDiv = document.createElement('div');
-            messageDiv.classList.add('message');
-            messageDiv.classList.add(isUser ? 'user-message' : 'bot-message');
-            messageDiv.innerHTML = message;
+            messageDiv.className = `message ${className}`;
+            messageDiv.innerHTML = text;
             chatbotMessages.appendChild(messageDiv);
             chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
         }
 
-        // Process user input
-        function processInput() {
-            const userInput = chatbotInput.value.toLowerCase().trim();
-            if (!userInput) return;
+        // Event listeners for sending messages
+        chatbotSend.addEventListener('click', sendMessage);
+        chatbotInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
 
-            addMessage(userInput, true);
-            chatbotInput.value = '';
-
-            // Simulate typing indicator
-            const typingIndicator = document.createElement('div');
-            typingIndicator.classList.add('message', 'bot-message');
-            typingIndicator.innerHTML = '<i class="fas fa-ellipsis-h"></i>';
-            chatbotMessages.appendChild(typingIndicator);
-            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
-
-            // Remove typing indicator after delay
-            setTimeout(() => {
-                typingIndicator.remove();
+        // Animation on scroll
+        const animateElements = document.querySelectorAll('.animate');
+        
+        function checkScroll() {
+            animateElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
                 
-                // Find matching response
-                let response = chatbotResponses.default;
-                for (const [key, value] of Object.entries(chatbotResponses)) {
-                    if (userInput.includes(key)) {
-                        response = value;
-                        break;
-                    }
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('animated');
                 }
-                
-                addMessage(response, false);
-            }, 1000 + Math.random() * 1000);
+            });
         }
 
-        // Send message on button click or enter key
-        chatbotSend.addEventListener('click', processInput);
-        chatbotInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') processInput();
-        });
-
-        // Quick questions
-        quickQuestions.forEach(question => {
-            question.addEventListener('click', () => {
-                chatbotInput.value = question.textContent;
-                processInput();
-            });
-        });
+        window.addEventListener('scroll', checkScroll);
+        window.addEventListener('load', checkScroll);
     </script>
 </body>
 </html>
